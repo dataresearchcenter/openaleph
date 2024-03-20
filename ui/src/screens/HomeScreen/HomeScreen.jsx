@@ -1,23 +1,14 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Link } from 'react-router-dom';
 import rehypeRaw from 'rehype-raw';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import queryString from 'query-string';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
+import { defineMessages, injectIntl } from 'react-intl';
 
 import withRouter from 'app/withRouter';
-import {
-  AnimatedCount,
-  SearchBox,
-  Category,
-  Country,
-  Schema,
-  Statistics,
-} from 'components/common';
+import { AnimatedCount, SearchBox } from 'components/common';
 import { fetchStatistics } from 'actions/index';
 import { selectMetadata, selectSession, selectStatistics } from 'selectors';
 import Screen from 'components/Screen/Screen';
@@ -30,6 +21,10 @@ const messages = defineMessages({
     id: 'home.title',
     defaultMessage: 'Find public records and leaks',
   },
+  about: {
+    id: 'home.about',
+    defaultMessage: 'Acerca de Cuba Investiga',
+  },
   access_disabled: {
     id: 'home.access_disabled',
     defaultMessage: 'Public access temporarily disabled',
@@ -40,15 +35,19 @@ const messages = defineMessages({
   },
   count_entities: {
     id: 'home.counts.entities',
-    defaultMessage: 'Public entities',
+    defaultMessage: 'Entidades',
   },
   count_datasets: {
     id: 'home.counts.datasets',
-    defaultMessage: 'Public datasets',
+    defaultMessage: 'Conjuntos de datos',
   },
   count_countries: {
     id: 'home.counts.countries',
     defaultMessage: 'Countries & territories',
+  },
+  count_documents: {
+    id: 'collection.info.documents',
+    defaultMessage: 'Documentos',
   },
 });
 
@@ -106,19 +105,19 @@ export class HomeScreen extends Component {
                 />
                 <div className="HomeScreen__thirds">
                   <AnimatedCount
-                    count={statistics?.things}
+                    count={87500000}
                     isPending={statistics.isPending}
                     label={intl.formatMessage(messages.count_entities)}
                   />
                   <AnimatedCount
-                    count={statistics?.collections}
+                    count={40}
                     isPending={statistics.isPending}
                     label={intl.formatMessage(messages.count_datasets)}
                   />
                   <AnimatedCount
-                    count={_.size(statistics?.countries)}
+                    count={115171}
                     isPending={statistics.isPending}
-                    label={intl.formatMessage(messages.count_countries)}
+                    label={intl.formatMessage(messages.count_documents)}
                   />
                 </div>
               </div>
@@ -158,6 +157,14 @@ export class HomeScreen extends Component {
               <p className="HomeScreen__paragraph--center">
                 <Link to="/pages/about">Más información</Link>
               </p>
+              <h1 className="HomeScreen__title">
+                {intl.formatMessage(messages.about)}
+              </h1>
+              <div className="HomeScreen__thirds">
+                Cuba Investiga es una herramienta para hacer periodismo de
+                investigación sobre Cuba.<br />
+                <Link to="/pages/about">Más información</Link>
+              </div>
             </div>
           </section>
         </div>
