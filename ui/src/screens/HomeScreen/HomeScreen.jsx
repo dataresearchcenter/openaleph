@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
 import rehypeRaw from 'rehype-raw';
 import { Navigate } from 'react-router-dom';
 import queryString from 'query-string';
@@ -35,7 +36,7 @@ const messages = defineMessages({
   },
   placeholder: {
     id: 'home.placeholder',
-    defaultMessage: 'Try searching: {samples}',
+    defaultMessage: 'Pruebe buscar: {samples}',
   },
   count_entities: {
     id: 'home.counts.entities',
@@ -130,74 +131,33 @@ export class HomeScreen extends Component {
           )}
           <section className="HomeScreen__section">
             <div className="HomeScreen__section__content">
-              <h1 className="HomeScreen__title">
-                <FormattedMessage
-                  id="home.stats.title"
-                  defaultMessage="Get started exploring public data"
-                />
-              </h1>
-              <div className="HomeScreen__thirds">
-                <div>
-                  <Statistics
-                    styleType="dark"
-                    headline={
-                      <FormattedMessage
-                        id="home.statistics.schemata"
-                        defaultMessage="Entity types"
-                      />
-                    }
-                    statistic={statistics.schemata}
-                    isPending={statistics.isPending}
-                    itemLink={(value) => ({
-                      pathname: 'search',
-                      search: queryString.stringify({ 'filter:schema': value }),
-                    })}
-                    itemLabel={(name) => (
-                      <Schema.Label schema={name} plural icon />
-                    )}
-                  />
-                </div>
-                <div>
-                  <Statistics
-                    styleType="dark"
-                    headline={
-                      <FormattedMessage
-                        id="home.statistics.categories"
-                        defaultMessage="Dataset categories"
-                      />
-                    }
-                    statistic={statistics.categories}
-                    isPending={statistics.isPending}
-                    itemLink={(value) => ({
-                      pathname: 'datasets',
-                      search: queryString.stringify({
-                        'collectionsfilter:category': value,
-                      }),
-                    })}
-                    itemLabel={(name) => <Category.Label category={name} />}
-                  />
-                </div>
-                <div>
-                  <Statistics
-                    styleType="dark"
-                    headline={
-                      <FormattedMessage
-                        id="home.statistics.countries"
-                        defaultMessage="Countries and territories"
-                      />
-                    }
-                    statistic={statistics.countries}
-                    isPending={statistics.isPending}
-                    itemLink={(value) => ({
-                      pathname: 'datasets',
-                      search: queryString.stringify({
-                        'collectionsfilter:countries': value,
-                      }),
-                    })}
-                    itemLabel={(name) => <Country.Name code={name} />}
-                  />
-                </div>
-              </div>
+              <p className="HomeScreen__paragraph--center">
+                <a
+                  className="HomeScreen__mailto"
+                  href="mailto:cubainvestiga@proyectoinventario.org"
+                >
+                  cubainvestiga@proyectoinventario.org
+                </a>
+              </p>
+              <p className="HomeScreen__paragraph--center">
+                pgp:{' '}
+                <a href="https://keys.openpgp.org/search?q=cubainvestiga@proyectoinventario.org">
+                  0x43E689E22CC902F4
+                </a>
+              </p>
+              <p className="HomeScreen__paragraph--center">
+                Una herramienta de{' '}
+                <a href="https://proyectoinventario.org/">
+                  Proyecto Inventario
+                </a>
+              </p>
+              <p className="HomeScreen__paragraph--center">
+                Desarrollado por{' '}
+                <a href="https://investigativedata.io">investigativedata.io</a>
+              </p>
+              <p className="HomeScreen__paragraph--center">
+                <Link to="/pages/about">Más información</Link>
+              </p>
             </div>
           </section>
         </div>

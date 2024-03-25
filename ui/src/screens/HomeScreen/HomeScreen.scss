@@ -58,6 +58,10 @@ $vertical-spacing: $aleph-grid-size * 5;
       b {
         color: white;
       }
+
+      a {
+        color: white;
+      }
     }
     &:nth-child(odd) {
       background-color: $light-gray5;
@@ -106,6 +110,21 @@ $vertical-spacing: $aleph-grid-size * 5;
     margin: 0 0 $vertical-spacing * 0.5;
     text-align: left;
     line-height: 1.5;
+
+    &--center {
+      text-align: center;
+      padding-bottom: $vertical-spacing * 0.3;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__mailto {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none !important;
   }
 
   &__search {
