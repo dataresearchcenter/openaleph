@@ -47,25 +47,25 @@ $vertical-spacing: $aleph-grid-size * 5;
       vertical-align: middle;
     }
 
-    // &:nth-child(even) {
-    //   background-color: $dark-gray2;
-    //   color: white;
+    &:nth-child(even) {
+      background-color: $dark-gray2;
+      color: white;
 
-    //   .HomeScreen__title {
-    //     color: white;
-    //   }
+      .HomeScreen__title {
+        color: white;
+      }
 
-    //   b {
-    //     color: white;
-    //   }
+      b {
+        color: white;
+      }
 
-    //   a {
-    //     color: white;
-    //   }
-    // }
-    // &:nth-child(odd) {
-    //   background-color: $light-gray5;
-    // }
+      a {
+        color: white;
+      }
+    }
+    &:nth-child(odd) {
+      background-color: $light-gray5;
+    }
   }
 
   &__text-container {
