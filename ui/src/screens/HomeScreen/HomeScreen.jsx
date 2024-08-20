@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import { Navigate, Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import queryString from 'query-string';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
@@ -154,17 +154,6 @@ export class HomeScreen extends Component {
                 Desarrollado por{' '}
                 <a href="https://investigativedata.io">investigativedata.io</a>
               </p>
-              <p className="HomeScreen__paragraph--center">
-                <Link to="/pages/about">Más información</Link>
-              </p>
-              <h1 className="HomeScreen__title">
-                {intl.formatMessage(messages.about)}
-              </h1>
-              <div className="HomeScreen__thirds">
-                Cuba Investiga es una herramienta para hacer periodismo de
-                investigación sobre Cuba.<br />
-                <Link to="/pages/about">Más información</Link>
-              </div>
             </div>
           </section>
         </div>
