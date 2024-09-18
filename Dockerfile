@@ -1,10 +1,10 @@
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 
-# build-essential 
+# build-essential
 RUN apt-get -qq -y update \
     && apt-get -qq --no-install-recommends -y install locales \
-    ca-certificates postgresql-client libpq-dev curl jq \
+    ca-certificates postgresql-client libpq-dev curl jq git \
     python3-pip python3-icu python3-psycopg2 \
     python3-lxml python3-crypto \
     && apt-get -qq -y autoremove \
