@@ -22,7 +22,7 @@ RUN groupadd -g 1000 -r app \
 # Add ftm-compare model data
 ADD ./contrib/glm_bernoulli_2e_wf-v0.4.1.pkl /opt/ftm-compare/model.pkl
 ADD ./contrib/word_frequencies-v0.4.1.zip /opt/ftm-compare/word-frequencies/word-frequencies.zip
-RUN python3 -m zipfile --extract /opt/ftm-compare/word-frequencies/word-frequencies.zip /opt/ftm-compare/word-frequencies/ 
+RUN python3 -m zipfile --extract /opt/ftm-compare/word-frequencies/word-frequencies.zip /opt/ftm-compare/word-frequencies/
 
 # Install Python dependencies
 RUN pip3 install --no-cache-dir -q -U pip setuptools six lxml lxml_html_clean
