@@ -2,8 +2,6 @@ FROM python:3.13-slim
 ENV DEBIAN_FRONTEND noninteractive
 LABEL org.opencontainers.image.source = "https://github.com/investigativedata/aleph"
 
-# build-essential
-# build-essential
 RUN apt-get -qq -y update \
     && apt-get -qq --no-install-recommends -y install locales \
     ca-certificates postgresql-client libpq-dev curl jq unzip git \
