@@ -290,15 +290,13 @@ flask-talisman==1.1.0 ; python_full_version > "3.10.0" and python_version < "3.1
 flask==2.3.3 ; python_full_version > "3.10.0" and python_version < "3.14" \
     --hash=sha256:09c347a92aa7ff4a8e7f3206795f30d826654baf38b873d0744cd571ca609efc \
     --hash=sha256:f69fcd559dc907ed196ab9df0e48471709175e696d6e698dd4dbe940f96ce66b
+followthemoney @ git+https://github.com/investigativedata/followthemoney.git@240d045836978110e5c49c96d6477b314757f0ec ; python_full_version > "3.10.0" and python_version < "3.14"
 followthemoney-compare==0.4.4 ; python_full_version > "3.10.0" and python_version < "3.14" \
     --hash=sha256:292d1af0a6ee2b525c60d64b5fbba24e615980c49a670791b046ea3b8dbf4284 \
     --hash=sha256:d6b1e1152dad7dbb7712087f99fd9623c56daac0e748b23af9c7e16ce956dec9
 followthemoney-store[postgresql]==3.1.0 ; python_full_version > "3.10.0" and python_version < "3.14" \
     --hash=sha256:4c8e05ddbec4eb729670e813f2e0d768c79229fa2bea6458de87897d51cf5908 \
     --hash=sha256:93a021f5c822dfcc21e85bf2291494d96f50c53dfceeb9a86418c6a99feaab82
-followthemoney==3.7.4 ; python_full_version > "3.10.0" and python_version < "3.14" \
-    --hash=sha256:1e77d1aaafe30b59242e61f78a62a90a07037147021532f01a3bb5c915b74d27 \
-    --hash=sha256:3b5717b0757f8f5d3b484ebbbe014ce744b431477063842fc0732fee8ac2cdce
 fuzzywuzzy[speedup]==0.18.0 ; python_full_version > "3.10.0" and python_version < "3.14" \
     --hash=sha256:45016e92264780e58972dca1b3d939ac864b78437422beecebb3095f8efd00e8 \
     --hash=sha256:928244b28db720d1e0ee7587acf660ea49d7e4c632569cad4f1cd7e68a5f0993

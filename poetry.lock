@@ -976,10 +976,8 @@ version = "3.7.4"
 description = ""
 optional = false
 python-versions = "*"
-files = [
-    {file = "followthemoney-3.7.4-py2.py3-none-any.whl", hash = "sha256:1e77d1aaafe30b59242e61f78a62a90a07037147021532f01a3bb5c915b74d27"},
-    {file = "followthemoney-3.7.4.tar.gz", hash = "sha256:3b5717b0757f8f5d3b484ebbbe014ce744b431477063842fc0732fee8ac2cdce"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 babel = ">=2.14.0,<3.0.0"
@@ -987,7 +985,7 @@ banal = ">=1.0.6,<1.1.0"
 click = ">=8.0,<9.0.0"
 countrynames = ">=1.13.0,<2.0.0"
 fingerprints = ">=1.0.1,<2.0.0"
-networkx = ">=2.5,<3.4"
+networkx = ">=2.5,<3.5"
 normality = ">=2.4.0,<3.0.0"
 openpyxl = ">=3.0.5,<4.0.0"
 orjson = ">=3.7,<4.0"
@@ -996,7 +994,7 @@ prefixdate = ">=0.4.0,<1.0.0"
 python-stdnum = ">=1.16,<2.0.0"
 pytz = ">=2021.1"
 pyyaml = ">=5.0.0,<7.0.0"
-rdflib = ">=6.2.0,<7.1.0"
+rdflib = ">=6.2.0,<7.2.0"
 requests = ">=2.21.0,<3.0.0"
 rigour = ">=0.6.1,<1.0.0"
 sqlalchemy = ">=1.4.49,<3.0.0"
@@ -1006,6 +1004,12 @@ types-PyYAML = "*"
 
 [package.extras]
 dev = ["bump2version", "coverage (>=4.1)", "flake8 (>=2.6.0)", "mypy", "pip (>=10.0.0)", "pytest", "pytest-cov", "recommonmark (>=0.4.0)", "responses (>=0.9.0)", "transifex-client", "twine", "types-PyYAML", "types-openpyxl", "types-requests", "types-setuptools", "wheel (>=0.29.0)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/investigativedata/followthemoney.git"
+reference = "schema/science-identifiers"
+resolved_reference = "240d045836978110e5c49c96d6477b314757f0ec"
 
 [[package]]
 name = "followthemoney-compare"
@@ -3285,4 +3289,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">3.10,<3.14"
-content-hash = "3a5bfeb660f8c184e044d6a9d09b95395b5d79f68d113e59ccdc6332c1b3ca53"
+content-hash = "04a14e8a08509318c4ef7464a4407119770f192344235f30487ff06aa8c3501d"

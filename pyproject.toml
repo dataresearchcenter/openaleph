@@ -16,7 +16,7 @@ aleph = "aleph.manage:cli"
 [tool.poetry.dependencies]
 python = ">3.10,<3.14"
 banal = "^1.0.6"
-followthemoney = "^3.7.4"
+followthemoney = {git = "https://github.com/investigativedata/followthemoney.git", rev = "schema/science-identifiers"}
 followthemoney-store = { extras = ["postgresql"], version = "^3.1.0" }
 fingerprints = "^1.2.3"
 servicelayer = { extras = ["amazon"], version = "^1.23.1" }
