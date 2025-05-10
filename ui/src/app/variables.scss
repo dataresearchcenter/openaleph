@@ -1,3 +1,20 @@
+@import url('https://cdn.investigativedata.org/style/fonts.min.css');
+
+$pt-font-family: var(--font-family-sans);
+$pt-font-family-monospace: var(--font-family-mono);
+
+$black: #1a1a1a;
+$pt-text-color: $black;
+$pt-intent-primary: #ff5f33;
+$pt-app-background-color: #fff8f1;
+
+$pt-border-radius: 0;
+$pt-border-shadow-opacity: 0;
+$pt-drop-shadow-opacity: 0;
+$pt-dark-border-shadow-opacity: 0;
+$pt-dark-drop-shadow-opacity: 0;
+$pt-input-box-shadow: 0;
+
 @import '~@blueprintjs/core/lib/scss/variables';
 @import '~@blueprintjs/icons/lib/scss/variables';
 
@@ -56,3 +73,8 @@ $warning-text-color: #8a6d3b;
 $button-color-hover: #137cbd;
 $views-menu-background-color: rgba(92, 112, 128, 0.5);
 $aleph-error-highlight-color: rgb(212, 19, 13);
+
+// adjust INTER font
+* {
+  letter-spacing: -0.02rem;
+}
